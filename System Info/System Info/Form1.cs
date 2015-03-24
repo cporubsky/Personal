@@ -19,8 +19,8 @@ using System.Net;
 namespace System_Info
 {
     public partial class Form1 : Form
-    {
-        private int val = 1073741824; //number of bytes in GB
+    {      
+        SysInfo s = new SysInfo();
 
         public Form1()
         {
@@ -29,88 +29,23 @@ namespace System_Info
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OsInfo();
-            MemoryInfo();
-            //get machine name
-            uxMachineName.Text = System.Environment.MachineName;
-            ProcessorInfo();
-            HardDriveInfo();
-            GetIP();
-        }
-
-        public void OsInfo()
-        {
-            string os = "SELECT * FROM Win32_OperatingSystem";
-            ManagementObjectSearcher osSearch = new ManagementObjectSearcher(os);
-
-            foreach (ManagementObject info in osSearch.Get())
+            uxOs.Text = s.OsInfo();
+            uxMemory.Text = s.MemoryInfo();           
+            uxMachineName.Text = System.Environment.MachineName; //get machine name
+            uxProcessor.Text = s.ProcessorInfo();
+            textBox1.Text = s.HardDriveInfo();
+            if (uxRadioButton1.Checked == true)
             {
-                //get os and service pack
-                uxOs.Text = info.Properties["Caption"].Value.ToString().Trim() + " Service Pack: " + info.Properties["ServicePackMajorVersion"].Value.ToString();
+                uxIP.Text = s.GetIP(1);
             }
-        }
+            else uxIP.Text = s.GetIP(2);
+            
 
-        public void MemoryInfo()
-        {
-            ObjectQuery o = new ObjectQuery("SELECT * FROM Win32_PhysicalMemory");
-            ManagementObjectSearcher memSearch = new ManagementObjectSearcher(o);
-            foreach (ManagementObject info in memSearch.Get())
-            {
-                double size = Convert.ToDouble(info.Properties["Capacity"].Value);             
-                uxMemory.Text = (size / val).ToString() + " GB";
-            }
-        }
 
-        public void ProcessorInfo()
-        {
-            //get processor
-            RegistryKey Rkey = Registry.LocalMachine;
-            Rkey = Rkey.OpenSubKey("HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0");
-            uxProcessor.Text = (string)Rkey.GetValue("ProcessorNameString");
-        }
+            /*if (!Environment.Is64BitOperatingSystem) uxIP.Text = "32 Bit";
+            else uxIP.Text = "64 Bit";*/
 
-        public void HardDriveInfo()
-        {
-            StringBuilder st = new StringBuilder();
-            foreach (System.IO.DriveInfo label in System.IO.DriveInfo.GetDrives())
-            {
-                if (label.IsReady)
-                {
-                    if (label.Name.Equals("X:\\") || label.Name.Equals("U:\\") || label.Name.Equals("W:\\") || label.Name.Equals("I:\\")) break;
-                    st.Append(label.RootDirectory);
-                    long volumeSize = label.TotalSize / val;
-                    st.Append("  " + volumeSize.ToString() + " GB" + Environment.NewLine);
-                }
-            }
-            textBox1.Text = st.ToString();
-        }
-
-        public void GetIP()
-        {          
-            StringBuilder sb = new StringBuilder();
-
-            // Get a list of all network interfaces (usually one per network card, dialup, and VPN connection) 
-            NetworkInterface[] networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
-
-            foreach (NetworkInterface network in networkInterfaces)
-            {
-                // Read the IP configuration for each network 
-                IPInterfaceProperties properties = network.GetIPProperties();
-
-                // Each network interface may have multiple IP addresses 
-                foreach (IPAddressInformation address in properties.UnicastAddresses)
-                {
-                    // We're only interested in IPv4 addresses for now 
-                    if (address.Address.AddressFamily != AddressFamily.InterNetwork) continue;
-                       
-                    // Ignore loopback addresses (e.g., 127.0.0.1) 
-                    if (IPAddress.IsLoopback(address.Address)) continue;
-                       
-                    if (network.Name == "Local Area Connection") sb.AppendLine(address.Address.ToString() + " (" + network.Name + ")");
-                    else break;               
-                }
-            }
-            textBox2.Text = sb.ToString();
+            
         }
 
     }

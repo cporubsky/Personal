@@ -41,12 +41,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.uxIP = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.uxRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.uxRadioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 231);
+            this.button1.Location = new System.Drawing.Point(233, 216);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -124,10 +129,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(526, 15);
+            this.textBox1.Location = new System.Drawing.Point(7, 19);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 81);
+            this.textBox1.Size = new System.Drawing.Size(88, 48);
             this.textBox1.TabIndex = 11;
             // 
             // label5
@@ -147,23 +152,58 @@
             this.uxIP.Size = new System.Drawing.Size(0, 13);
             this.uxIP.TabIndex = 13;
             // 
-            // textBox2
+            // uxRadioButton1
             // 
-            this.textBox2.Location = new System.Drawing.Point(332, 134);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 120);
-            this.textBox2.TabIndex = 14;
+            this.uxRadioButton1.AutoSize = true;
+            this.uxRadioButton1.Checked = true;
+            this.uxRadioButton1.Location = new System.Drawing.Point(6, 20);
+            this.uxRadioButton1.Name = "uxRadioButton1";
+            this.uxRadioButton1.Size = new System.Drawing.Size(49, 17);
+            this.uxRadioButton1.TabIndex = 15;
+            this.uxRadioButton1.TabStop = true;
+            this.uxRadioButton1.Text = "ADM";
+            this.uxRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // uxRadioButton2
+            // 
+            this.uxRadioButton2.AutoSize = true;
+            this.uxRadioButton2.Location = new System.Drawing.Point(6, 44);
+            this.uxRadioButton2.Name = "uxRadioButton2";
+            this.uxRadioButton2.Size = new System.Drawing.Size(45, 17);
+            this.uxRadioButton2.TabIndex = 16;
+            this.uxRadioButton2.Text = "SFA";
+            this.uxRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(15, 164);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(103, 75);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hard Drives";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.uxRadioButton2);
+            this.groupBox2.Controls.Add(this.uxRadioButton1);
+            this.groupBox2.Location = new System.Drawing.Point(124, 164);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(103, 75);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dept";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 266);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(399, 323);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.uxIP);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.uxMemory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.uxProcessor);
@@ -176,6 +216,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "System Information";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +239,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label uxIP;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton uxRadioButton1;
+        private System.Windows.Forms.RadioButton uxRadioButton2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
