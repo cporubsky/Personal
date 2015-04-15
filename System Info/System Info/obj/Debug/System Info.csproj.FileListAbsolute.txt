@@ -12,7 +12,6 @@ C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\Syste
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System Info.pdb
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\bin\Debug\System Info.exe
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\bin\Debug\System Info.pdb
-C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System Info.csprojResolveAssemblyReference.cache
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System_Info.Form1.resources
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System_Info.Properties.Resources.resources
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System Info.csproj.GenerateResource.Cache
