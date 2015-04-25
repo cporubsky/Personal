@@ -15,3 +15,4 @@ C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\bin\Debug\Syste
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System_Info.Form1.resources
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System_Info.Properties.Resources.resources
 C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System Info.csproj.GenerateResource.Cache
+C:\Users\cporubsky\Source\Repos\Personal\System Info\System Info\obj\Debug\System Info.csprojResolveAssemblyReference.cache

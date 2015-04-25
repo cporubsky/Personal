@@ -24,6 +24,11 @@ namespace System_Info
         /// 
         /// </summary>
         SysInfo s = new SysInfo();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        FileFormat f = new FileFormat();
         
         /// <summary>
         /// 
@@ -40,7 +45,6 @@ namespace System_Info
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-
             string memory = s.memory1;
             string machineName = System.Environment.MachineName;
             string processor = s.processor1;
@@ -51,6 +55,8 @@ namespace System_Info
             string osArch = s.osArch1;
             string osServicePack = s.osServicePack1;
             string cDrive = s.Cdrive1;
+            string location = textBox2.Text;
+            string user = textBox3.Text;
 
             uxOs.Text = osName + " Service Pack:" + osServicePack + " (" + osArch +"-bit)";
             uxMemory.Text = memory + " GB";    
@@ -63,39 +69,53 @@ namespace System_Info
 
             uxIP.Text = ip;
 
-            if (uxCheckBox.Checked)
+            if (uxCheckBox1.Checked)
             {
-                try
+                if (uxCheckBox2.Checked && !uxCheckBox3.Checked) //location checked
                 {
-                    using (StreamWriter stream = File.AppendText("SystemInfo.txt"))
-                    {
-                        AddToFile(machineName, ip, osName, osArch, osServicePack, cpuBit, processor, memory, cDrive, stream);
+                    try
+                    { //location
+                        using (StreamWriter stream = File.AppendText("SystemInfo.txt"))
+                        {
+                            f.AddToFile2(machineName, ip, location, osName, osArch, osServicePack, cpuBit, processor, memory, cDrive, stream);
+                        }
                     }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }          
                 }
-                catch (Exception ex)
+                if (uxCheckBox3.Checked && !uxCheckBox2.Checked) //user checked
                 {
-                    MessageBox.Show(ex.ToString());
+                    try
+                    {
+                        using (StreamWriter stream = File.AppendText("SystemInfo.txt"))
+                        {
+                            f.AddToFile3(machineName, ip, user, osName, osArch, osServicePack, processor, cpuBit, memory, hardDrive, stream);
+                        }
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }     
                 }
+                else if (uxCheckBox2.Checked && uxCheckBox3.Checked) //location checked and user checked
+                {
+                    try
+                    {
+                        using (StreamWriter stream = File.AppendText("SystemInfo.txt"))
+                        {
+                            f.AddToFile4(machineName, ip, location, user, osName, osArch, osServicePack, cpuBit, processor, memory, cDrive, stream);
+                        }
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                }
+                else //neither location, nor user checked
+                {
+                    try
+                    {
+                        using (StreamWriter stream = File.AppendText("SystemInfo.txt"))
+                        {
+                            f.AddToFile1(machineName, ip, osName, osArch, osServicePack, cpuBit, processor, memory, cDrive, stream);
+                        }
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                }        
             }    
-        }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="machineName"></param>
-        /// <param name="ip"></param>
-        /// <param name="osName"></param>
-        /// <param name="osArch"></param>
-        /// <param name="osServicePack"></param>
-        /// <param name="cpuInfo"></param>
-        /// <param name="cpuBit"></param>
-        /// <param name="memory"></param>
-        /// <param name="hardDrive"></param>
-        /// <param name="w"></param>
-        public static void AddToFile(string machineName,string ip ,string osName, string osArch, string osServicePack, string cpuInfo, string cpuBit, string memory, string hardDrive, TextWriter w)
-        {
-            w.Write("{0},{1},,,{2},{3},{4},{5},{6},{7},{8}", machineName, ip, osName, osArch, osServicePack, cpuInfo, cpuBit, memory, hardDrive);           
-        }
-
+        }   
     }
 }

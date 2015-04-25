@@ -45,7 +45,11 @@
             this.uxRadioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.uxCheckBox = new System.Windows.Forms.CheckBox();
+            this.uxCheckBox1 = new System.Windows.Forms.CheckBox();
+            this.uxCheckBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.uxCheckBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -196,24 +200,64 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dept";
             // 
-            // uxCheckBox
+            // uxCheckBox1
             // 
-            this.uxCheckBox.AutoSize = true;
-            this.uxCheckBox.Checked = true;
-            this.uxCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.uxCheckBox.Location = new System.Drawing.Point(47, 275);
-            this.uxCheckBox.Name = "uxCheckBox";
-            this.uxCheckBox.Size = new System.Drawing.Size(77, 17);
-            this.uxCheckBox.TabIndex = 19;
-            this.uxCheckBox.Text = "Write Data";
-            this.uxCheckBox.UseVisualStyleBackColor = true;
+            this.uxCheckBox1.AutoSize = true;
+            this.uxCheckBox1.Checked = true;
+            this.uxCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.uxCheckBox1.Location = new System.Drawing.Point(16, 257);
+            this.uxCheckBox1.Name = "uxCheckBox1";
+            this.uxCheckBox1.Size = new System.Drawing.Size(77, 17);
+            this.uxCheckBox1.TabIndex = 19;
+            this.uxCheckBox1.Text = "Write Data";
+            this.uxCheckBox1.UseVisualStyleBackColor = true;
+            // 
+            // uxCheckBox2
+            // 
+            this.uxCheckBox2.AutoSize = true;
+            this.uxCheckBox2.Location = new System.Drawing.Point(130, 257);
+            this.uxCheckBox2.Name = "uxCheckBox2";
+            this.uxCheckBox2.Size = new System.Drawing.Size(92, 17);
+            this.uxCheckBox2.TabIndex = 20;
+            this.uxCheckBox2.Text = "Add Location:";
+            this.uxCheckBox2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(229, 257);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 21;
+            // 
+            // uxCheckBox3
+            // 
+            this.uxCheckBox3.AutoSize = true;
+            this.uxCheckBox3.Location = new System.Drawing.Point(130, 294);
+            this.uxCheckBox3.Name = "uxCheckBox3";
+            this.uxCheckBox3.Size = new System.Drawing.Size(73, 17);
+            this.uxCheckBox3.TabIndex = 22;
+            this.uxCheckBox3.Text = "Add User:";
+            this.uxCheckBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(229, 291);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 323);
-            this.Controls.Add(this.uxCheckBox);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.uxCheckBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.uxCheckBox2);
+            this.Controls.Add(this.uxCheckBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.uxIP);
@@ -257,7 +301,11 @@
         private System.Windows.Forms.RadioButton uxRadioButton2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox uxCheckBox;
+        private System.Windows.Forms.CheckBox uxCheckBox1;
+        private System.Windows.Forms.CheckBox uxCheckBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox uxCheckBox3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
