@@ -14,6 +14,11 @@ namespace AddressBook
                                       "Trusted_Connection = yes;" +
                                       "database = TestDB; " +
                                       "connection timeout = 30");
+        public SqlConn()
+        {
+
+        }
+
         public void ConnectSql()
         {
             _sql.Open();

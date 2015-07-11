@@ -10,3 +10,6 @@ C:\Users\Corey\Desktop\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
 C:\Users\Corey\Desktop\visstudbackup\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
 C:\Users\Corey\Desktop\visstudbackup\AddressBook\AddressBook\obj\Debug\AddressBook.exe
 C:\Users\Corey\Desktop\visstudbackup\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.pdb

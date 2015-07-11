@@ -13,9 +13,9 @@ using System.Data.SqlClient;
 
 namespace AddressBook
 {
-    public partial class Form1 : Form
+    public partial class uxMainMenuForm : Form
     {
-        public Form1()
+        public uxMainMenuForm()
         {
             InitializeComponent();
         }

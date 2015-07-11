@@ -8,5 +8,23 @@ namespace AddressBook
 {
     public class Controller
     {
+
+        AddressBook a;
+        SqlConn s;
+        UserManagement u;
+
+        public Controller(UserManagement u, AddressBook a, SqlConn s)
+        {
+            this.u = u;
+            this.a = a;
+            this.s = s;
+        }
+
+        private void NewEntry()
+        {
+
+        }
+
+
     }
 }
