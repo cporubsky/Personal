@@ -13,3 +13,12 @@ C:\Users\Corey\Desktop\visstudbackup\AddressBook\AddressBook\obj\Debug\AddressBo
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.exe
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxSearchForm.resources
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxMainMenuForm.resources
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxNewAddressForm.resources
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxLogInForm.resources
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.Cache

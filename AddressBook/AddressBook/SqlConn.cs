@@ -9,24 +9,32 @@ namespace AddressBook
 {
     public class SqlConn
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         private SqlConnection _sql = new SqlConnection("server = beast-pc;" +
                                       "Trusted_Connection = yes;" +
                                       "database = TestDB; " +
                                       "connection timeout = 30");
+
+
         public SqlConn()
         {
-
+            
         }
+
 
         public void ConnectSql()
         {
             _sql.Open();
         }
 
+
         public void CloseSql()
         {
             _sql.Close();
         }     
+
+
     }
 }

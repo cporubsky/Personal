@@ -8,22 +8,55 @@ namespace AddressBook
 {
     public class Controller
     {
+   
+        AddressBook a; UserManagement u; SqlConn sql; State state;
 
-        AddressBook a;
-        SqlConn s;
-        UserManagement u;
+        private List<Observer> observers = new List<Observer>(); // registry of event handlers
+      
+        public void register(Observer f) { observers.Add(f); } //register(f) adds event-handler method  f  to the registry
 
-        public Controller(UserManagement u, AddressBook a, SqlConn s)
+        private void signalObservers() { foreach (Observer m in observers) { m(); } } 
+
+        /// <summary>
+        /// Default contstructor
+        /// </summary>
+        public Controller()
+        {
+
+        }
+
+        public Controller(UserManagement u)
+        {
+            this.u = u;
+        }
+
+        public Controller(UserManagement u, AddressBook a, SqlConn sql, State state)
         {
             this.u = u;
             this.a = a;
-            this.s = s;
+            this.sql = sql;
+            this.state = state;
         }
 
-        private void NewEntry()
+
+        private void Handle(object sender, EventArgs e)
         {
-
+            switch (state.Status)
+            {
+                case "Log In":
+                    {  
+                        string logIn = "SELECT * from USERS WHERE UserName =  " + u.UserName;
+                        break;
+                    }
+                case "Main Menu":
+                    {
+                        break;
+                    }
+                default:
+                    break;
+            }
         }
+        
 
 
     }

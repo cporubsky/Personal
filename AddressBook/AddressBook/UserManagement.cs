@@ -8,29 +8,48 @@ namespace AddressBook
 {
     public class UserManagement
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         private string _userName;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private string _password;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public string UserName
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PassWord
+        {
+            get; set;         
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public UserManagement()
         {
 
         }
 
+        
         public UserManagement(string UserName, string Password)
         {
             _userName = UserName;
             _password = Password;
         }
 
-        public bool validateUser(string UserName, string Password)
-        {
 
-            string sql = "SELECT * from USERS WHERE UserName =  " + UserName.ToLower();
-
-
-            return true;
-        }
 
         
     }

@@ -12,22 +12,22 @@ namespace AddressBook
 {
     public partial class uxLogInForm : Form
     {
-        private string _userName;
-        private string _password;
-        UserManagement _um;
+        State state;
+        InputHandler handle;
 
-        public uxLogInForm()
+        public uxLogInForm(State state)
         {
+            this.state = state;
             InitializeComponent();
+
+            uxPassword.Text = "";
+            uxPassword.PasswordChar = '\u2022'; //creates bullets for chars in password for gui
         }
 
         private void uxLogIn_Click(object sender, EventArgs e)
         {
-            _userName = uxUserName.Text;
-            _password = uxPassword.Text;
-
-            _um = new UserManagement();
-
+            state.Status = "Log In";
+            handle(sender, e);
         }
     }
 }
