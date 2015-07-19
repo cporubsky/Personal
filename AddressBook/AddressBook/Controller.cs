@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace AddressBook
 {
     public class Controller
     {
    
-        AddressBook a; UserManagement u; SqlConn sql; State state;
+        AddressBook a; UserManagement u; State state;
 
         private List<Observer> observers = new List<Observer>(); // registry of event handlers
       
@@ -30,22 +31,26 @@ namespace AddressBook
             this.u = u;
         }
 
-        public Controller(UserManagement u, AddressBook a, SqlConn sql, State state)
+        public Controller(UserManagement u, AddressBook a, State state)
         {
             this.u = u;
             this.a = a;
-            this.sql = sql;
             this.state = state;
         }
 
 
-        private void Handle(object sender, EventArgs e)
+        private bool Handle(object sender, EventArgs e)
         {
+            bool result = false;
+
             switch (state.Status)
             {
                 case "Log In":
                     {  
                         string logIn = "SELECT * from USERS WHERE UserName =  " + u.UserName;
+
+
+                        result = true;
                         break;
                     }
                 case "Main Menu":
@@ -55,9 +60,10 @@ namespace AddressBook
                 default:
                     break;
             }
+            return result;
         }
         
-
+       
 
     }
 }

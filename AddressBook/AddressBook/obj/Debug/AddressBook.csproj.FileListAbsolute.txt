@@ -22,3 +22,15 @@ C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressB
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxLogInForm.resources
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
 C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.exe
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxSearchForm.resources
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxMainMenuForm.resources
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxNewAddressForm.resources
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxLogInForm.resources
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe
+C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
