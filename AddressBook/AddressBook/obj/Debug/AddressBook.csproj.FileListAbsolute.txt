@@ -25,7 +25,6 @@ C:\Users\Corey\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressB
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe.config
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.exe
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
-C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxSearchForm.resources
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxMainMenuForm.resources
 C:\Users\User\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxNewAddressForm.resources

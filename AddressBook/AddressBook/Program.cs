@@ -16,7 +16,16 @@ namespace AddressBook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new uxLogInForm());
+
+            //State s;
+            UserManagement u = new UserManagement();
+            AddressBook a = new AddressBook();
+            State s = new State("Login");
+            
+            Controller c = new Controller(u,a, s);
+
+
+            Application.Run(new uxLogInForm(s, u, c));
         }
     }
 }

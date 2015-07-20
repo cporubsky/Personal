@@ -11,11 +11,6 @@ namespace AddressBook
         /// <summary>
         /// 
         /// </summary>
-        private int _id;
-        
-        /// <summary>
-        /// 
-        /// </summary>
         private string _firstName;
 
         /// <summary>
@@ -53,6 +48,11 @@ namespace AddressBook
         /// </summary>
         private string _email;
 
+        public AddressBook()
+        {
+
+        }
+
 
         public AddressBook(string FirstName, string LastName, string Street, string City, string State, int Zip, int PhoneNumber, string Email)
         {
@@ -64,15 +64,6 @@ namespace AddressBook
             _zip = Zip;
             _phoneNumber = PhoneNumber;
             _email = Email;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public int Id
-        {
-            get;
-            set;
         }
 
         /// <summary>

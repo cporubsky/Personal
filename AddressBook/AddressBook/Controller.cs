@@ -10,7 +10,9 @@ namespace AddressBook
     public class Controller
     {
    
-        AddressBook a; UserManagement u; State state;
+        AddressBook a; UserManagement u; State s;
+
+        private string connString = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
 
         private List<Observer> observers = new List<Observer>(); // registry of event handlers
       
@@ -26,42 +28,55 @@ namespace AddressBook
 
         }
 
-        public Controller(UserManagement u)
-        {
-            this.u = u;
-        }
-
-        public Controller(UserManagement u, AddressBook a, State state)
+        public Controller(UserManagement u, AddressBook a, State s)
         {
             this.u = u;
             this.a = a;
-            this.state = state;
+            this.s = s;
         }
 
-
-        private bool Handle(object sender, EventArgs e)
+        public bool handle(object sender, EventArgs e)
         {
-            bool result = false;
-
-            switch (state.Status)
+            switch (s.Status)
             {
-                case "Log In":
-                    {  
-                        string logIn = "SELECT * from USERS WHERE UserName =  " + u.UserName;
+                case "Login":
+                    {
+                        string userFromTable = ""; //username from table
+                        string pwFromTable = ""; //password from table
 
-
-                        result = true;
-                        break;
+                        using (SqlConnection sqlConn = new SqlConnection(connString)) //new sql connection obj
+                        {
+                            using (SqlCommand cmd = new SqlCommand("SELECT username, password FROM login_credentials WHERE username = @userForm;", sqlConn)) //set sql statement
+                            {
+                                cmd.Parameters.AddWithValue("@userForm", u.UserName); //set value in query with username from form
+                                sqlConn.Open(); //open connection
+                                using (SqlDataReader reader = cmd.ExecuteReader()) //executing cmd variable
+                                {
+                                    if (reader.HasRows) //while there are rows in db that match results
+                                    {
+                                        while (reader.Read()) //read row
+                                        {
+                                            userFromTable = reader.GetString(reader.GetOrdinal("username")); //gets username from column
+                                            pwFromTable = reader.GetString(reader.GetOrdinal("password"));  //gets password from column
+                                            if (u.PassWord.CompareTo(pwFromTable) == 0) return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        return false; //incorrect username or password
                     }
                 case "Main Menu":
                     {
-                        break;
+                        return true;
                     }
                 default:
-                    break;
+                    return false;
             }
-            return result;
         }
+
+
+        
         
        
 
