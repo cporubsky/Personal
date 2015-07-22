@@ -46,7 +46,7 @@ namespace AddressBook
 
                         using (SqlConnection sqlConn = new SqlConnection(connString)) //new sql connection obj
                         {
-                            using (SqlCommand cmd = new SqlCommand("SELECT username, password FROM login_credentials WHERE username = @userForm;", sqlConn)) //set sql statement
+                            using (SqlCommand cmd = new SqlCommand("SELECT username, password FROM Login_Credentials WHERE username = @userForm;", sqlConn)) //set sql statement
                             {
                                 cmd.Parameters.AddWithValue("@userForm", u.UserName); //set value in query with username from form
                                 sqlConn.Open(); //open connection

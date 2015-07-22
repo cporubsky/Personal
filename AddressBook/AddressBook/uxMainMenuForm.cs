@@ -15,31 +15,30 @@ namespace AddressBook
 {
     public partial class uxMainMenuForm : Form
     {
+        private bool admin = false;
+
         public uxMainMenuForm()
         {
             InitializeComponent();
         }
 
-        public void SqlConn()
+        public uxMainMenuForm(bool admin)
         {
-            SqlConnection sql = new SqlConnection("server = beast-pc;" +
-                                       "Trusted_Connection = yes;" +
-                                       "database = TestDB; " +
-                                       "connection timeout = 30");
+            this.admin = admin;
+            InitializeComponent();
 
-
-            try
+            if (admin)
             {
-                sql.Open();
-                MessageBox.Show("Connection is open!");
-                sql.Close();
+                uxButton3.Enabled = true;
+                uxButton4.Enabled = true;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-         
-
         }
+
+
+
+
+
+
+    }
     }
 }

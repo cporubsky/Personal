@@ -30,6 +30,8 @@
         {
             this.uxButton1 = new System.Windows.Forms.Button();
             this.uxButton2 = new System.Windows.Forms.Button();
+            this.uxButton3 = new System.Windows.Forms.Button();
+            this.uxButton4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxButton1
@@ -50,11 +52,33 @@
             this.uxButton2.Text = "Search";
             this.uxButton2.UseVisualStyleBackColor = true;
             // 
+            // uxButton3
+            // 
+            this.uxButton3.Enabled = false;
+            this.uxButton3.Location = new System.Drawing.Point(12, 41);
+            this.uxButton3.Name = "uxButton3";
+            this.uxButton3.Size = new System.Drawing.Size(75, 23);
+            this.uxButton3.TabIndex = 2;
+            this.uxButton3.Text = "Add User";
+            this.uxButton3.UseVisualStyleBackColor = true;
+            // 
+            // uxButton4
+            // 
+            this.uxButton4.Enabled = false;
+            this.uxButton4.Location = new System.Drawing.Point(107, 41);
+            this.uxButton4.Name = "uxButton4";
+            this.uxButton4.Size = new System.Drawing.Size(75, 23);
+            this.uxButton4.TabIndex = 3;
+            this.uxButton4.Text = "Remove";
+            this.uxButton4.UseVisualStyleBackColor = true;
+            // 
             // uxMainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(207, 83);
+            this.ClientSize = new System.Drawing.Size(207, 95);
+            this.Controls.Add(this.uxButton4);
+            this.Controls.Add(this.uxButton3);
             this.Controls.Add(this.uxButton2);
             this.Controls.Add(this.uxButton1);
             this.Name = "uxMainMenuForm";
@@ -67,7 +91,8 @@
 
         private System.Windows.Forms.Button uxButton1;
         private System.Windows.Forms.Button uxButton2;
-
+        private System.Windows.Forms.Button uxButton3;
+        private System.Windows.Forms.Button uxButton4;
     }
 }
 

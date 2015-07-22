@@ -49,8 +49,32 @@ namespace AddressBook
             _password = Password;
         }
 
+        public void AddUser()
+        {
+
+        }
+
+        public void RemoveUser()
+        {
+
+        }
 
 
-        
+       public void Login()
+        {
+
+        }
+
+        public void GetSecurityQuestion()
+        {
+
+        }
+
+        public void ResetPassword()
+        {
+
+        }
+
+
     }
 }

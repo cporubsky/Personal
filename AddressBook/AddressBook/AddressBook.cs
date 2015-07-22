@@ -53,19 +53,6 @@ namespace AddressBook
 
         }
 
-
-        public AddressBook(string FirstName, string LastName, string Street, string City, string State, int Zip, int PhoneNumber, string Email)
-        {
-            _firstName = FirstName;
-            _lastName = LastName;
-            _street = Street;
-            _city = City;
-            _state = State;
-            _zip = Zip;
-            _phoneNumber = PhoneNumber;
-            _email = Email;
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -139,6 +126,18 @@ namespace AddressBook
         }
 
         private void NewEntry(string FirstName, string LastName, string Street, string City, string State, int Zip, int PhoneNumber, string Email)
+        {
+            _firstName = FirstName;
+            _lastName = LastName;
+            _street = Street;
+            _city = City;
+            _state = State;
+            _zip = Zip;
+            _phoneNumber = PhoneNumber;
+            _email = Email;
+        }
+
+        public void FindbyLastName()
         {
 
         }

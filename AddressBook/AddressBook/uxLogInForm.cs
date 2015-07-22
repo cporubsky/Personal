@@ -45,7 +45,14 @@ namespace AddressBook
             u.PassWord = uxPassword.Text; //password from form
             if (c.handle(sender, e))
             {
-                MessageBox.Show("Success");
+                if (uxUserName.Text == "cporubsky")
+                {
+                    MessageBox.Show("Admin is now logged in");
+                }
+                else
+                {
+                    MessageBox.Show("Success");
+                }
             }
             else
             {

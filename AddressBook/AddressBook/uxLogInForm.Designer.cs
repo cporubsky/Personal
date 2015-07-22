@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uxLogIn = new System.Windows.Forms.Button();
+            this.uxResetPw = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxUserName
@@ -69,7 +70,7 @@
             // 
             // uxLogIn
             // 
-            this.uxLogIn.Location = new System.Drawing.Point(74, 82);
+            this.uxLogIn.Location = new System.Drawing.Point(74, 61);
             this.uxLogIn.Name = "uxLogIn";
             this.uxLogIn.Size = new System.Drawing.Size(75, 23);
             this.uxLogIn.TabIndex = 4;
@@ -77,11 +78,21 @@
             this.uxLogIn.UseVisualStyleBackColor = true;
             this.uxLogIn.Click += new System.EventHandler(this.uxLogIn_Click);
             // 
+            // uxResetPw
+            // 
+            this.uxResetPw.Location = new System.Drawing.Point(150, 61);
+            this.uxResetPw.Name = "uxResetPw";
+            this.uxResetPw.Size = new System.Drawing.Size(75, 23);
+            this.uxResetPw.TabIndex = 5;
+            this.uxResetPw.Text = "Reset PW";
+            this.uxResetPw.UseVisualStyleBackColor = true;
+            // 
             // uxLogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 117);
+            this.ClientSize = new System.Drawing.Size(239, 105);
+            this.Controls.Add(this.uxResetPw);
             this.Controls.Add(this.uxLogIn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -101,5 +112,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button uxLogIn;
+        private System.Windows.Forms.Button uxResetPw;
     }
 }
