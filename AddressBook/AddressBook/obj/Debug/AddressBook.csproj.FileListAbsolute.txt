@@ -38,10 +38,10 @@ C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBo
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.exe
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\bin\Debug\AddressBook.pdb
-C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxSearchForm.resources
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxMainMenuForm.resources
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxNewAddressForm.resources
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.uxLogInForm.resources
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.Properties.Resources.resources
 C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.Cache
+C:\Users\Root\Desktop\Repos\Personal\AddressBook\AddressBook\obj\Debug\AddressBook.csprojResolveAssemblyReference.cache

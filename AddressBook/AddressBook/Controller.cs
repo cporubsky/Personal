@@ -12,7 +12,7 @@ namespace AddressBook
    
         AddressBook a; UserManagement u; State s;
 
-        private string connString = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
+        private string connString;
 
         private List<Observer> observers = new List<Observer>(); // registry of event handlers
       
@@ -28,11 +28,13 @@ namespace AddressBook
 
         }
 
-        public Controller(UserManagement u, AddressBook a, State s)
+        public Controller(UserManagement u, AddressBook a, State s, string connString)
         {
+
             this.u = u;
             this.a = a;
             this.s = s;
+            this.connString = connString;
         }
 
         public bool handle(object sender, EventArgs e)
@@ -41,32 +43,24 @@ namespace AddressBook
             {
                 case "Login":
                     {
-                        string userFromTable = ""; //username from table
-                        string pwFromTable = ""; //password from table
-
-                        using (SqlConnection sqlConn = new SqlConnection(connString)) //new sql connection obj
-                        {
-                            using (SqlCommand cmd = new SqlCommand("SELECT username, password FROM Login_Credentials WHERE username = @userForm;", sqlConn)) //set sql statement
-                            {
-                                cmd.Parameters.AddWithValue("@userForm", u.UserName); //set value in query with username from form
-                                sqlConn.Open(); //open connection
-                                using (SqlDataReader reader = cmd.ExecuteReader()) //executing cmd variable
-                                {
-                                    if (reader.HasRows) //while there are rows in db that match results
-                                    {
-                                        while (reader.Read()) //read row
-                                        {
-                                            userFromTable = reader.GetString(reader.GetOrdinal("username")); //gets username from column
-                                            pwFromTable = reader.GetString(reader.GetOrdinal("password"));  //gets password from column
-                                            if (u.PassWord.CompareTo(pwFromTable) == 0) return true;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        return false; //incorrect username or password
+                        if (u.Login(connString)) return true;
+                        return false;         
+                    }
+                case "Forgot":
+                    {
+                        return true;
                     }
                 case "Main Menu":
+                    {
+                        return true;
+                    }
+                case "Add User":
+                    {
+                        if(u.AddUser(connString) == 1) return true;
+                        return false;
+                       
+                    }
+                case "Remove User":
                     {
                         return true;
                     }
@@ -76,9 +70,38 @@ namespace AddressBook
         }
 
 
-        
-        
-       
+
+        public Dictionary<string, string> AllUsersTest(string Conn)
+        {
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+
+            string userFromTable = ""; //username from table
+            string pwFromTable = ""; //password from table
+
+            using (SqlConnection sqlConn = new SqlConnection(Conn)) //new sql connection obj
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT username, password FROM Login_Credentials", sqlConn)) //set sql statement
+                {
+                    sqlConn.Open(); //open connection
+                    using (SqlDataReader reader = cmd.ExecuteReader()) //executing cmd variable
+                    {
+                        if (reader.HasRows) //while there are rows in db that match results
+                        {
+                            while (reader.Read()) //read row
+                            {
+                                userFromTable = reader.GetString(reader.GetOrdinal("username")); //gets username from column
+                                pwFromTable = reader.GetString(reader.GetOrdinal("password"));  //gets password from column
+
+                                dictionary.Add(userFromTable.Trim().ToLower(), pwFromTable.Trim().ToLower());
+                            }
+                        }
+                    }
+                }
+            }
+
+            return dictionary;
+        }
+
 
     }
 }

@@ -17,7 +17,9 @@ namespace AddressBook
         State s;
         Controller c;
         UserManagement u;
-        
+
+        //tempConn = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
+
         public uxLogInForm()
         {
             InitializeComponent();
@@ -42,12 +44,32 @@ namespace AddressBook
             s.Status = "Login";
 
             u.UserName = uxUserName.Text; //username from form
-            u.PassWord = uxPassword.Text; //password from form
+            u.Password = uxPassword.Text; //password from form
             if (c.handle(sender, e))
             {
-                if (uxUserName.Text == "cporubsky")
+                //for testing
+                //Dictionary<string, string> temp = u.AllUsers(tempConn);
+
+                //StringBuilder sb = new StringBuilder();
+
+                //foreach(KeyValuePair<string,string> kvp in temp)
+                //{
+                //    string tempUser = kvp.Key;
+                //    string tempPw = kvp.Value;
+                //    sb.Append(tempUser + ": " + tempPw + Environment.NewLine);
+                    
+                //}
+
+                //MessageBox.Show(sb.ToString());
+
+                if (uxUserName.Text == "corey")
                 {
-                    MessageBox.Show("Admin is now logged in");
+                    MessageBox.Show("Admin is now logged in");             
+                    uxMainMenuForm mainMenu = new uxMainMenuForm(true, c);
+                    this.Hide();
+                    mainMenu.Show();
+                    this.Owner = mainMenu;
+                    
                 }
                 else
                 {

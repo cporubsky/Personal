@@ -17,13 +17,12 @@ namespace AddressBook
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //State s;
+            string connString = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
             UserManagement u = new UserManagement();
             AddressBook a = new AddressBook();
             State s = new State("Login");
-            
-            Controller c = new Controller(u,a, s);
 
+            Controller c = new Controller(u, a, s, connString);
 
             Application.Run(new uxLogInForm(s, u, c));
         }

@@ -30,7 +30,7 @@
         {
             this.uxButton1 = new System.Windows.Forms.Button();
             this.uxButton2 = new System.Windows.Forms.Button();
-            this.uxButton3 = new System.Windows.Forms.Button();
+            this.uxAddUser = new System.Windows.Forms.Button();
             this.uxButton4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,15 +52,16 @@
             this.uxButton2.Text = "Search";
             this.uxButton2.UseVisualStyleBackColor = true;
             // 
-            // uxButton3
+            // uxAddUser
             // 
-            this.uxButton3.Enabled = false;
-            this.uxButton3.Location = new System.Drawing.Point(12, 41);
-            this.uxButton3.Name = "uxButton3";
-            this.uxButton3.Size = new System.Drawing.Size(75, 23);
-            this.uxButton3.TabIndex = 2;
-            this.uxButton3.Text = "Add User";
-            this.uxButton3.UseVisualStyleBackColor = true;
+            this.uxAddUser.Enabled = false;
+            this.uxAddUser.Location = new System.Drawing.Point(12, 41);
+            this.uxAddUser.Name = "uxAddUser";
+            this.uxAddUser.Size = new System.Drawing.Size(75, 23);
+            this.uxAddUser.TabIndex = 2;
+            this.uxAddUser.Text = "Add User";
+            this.uxAddUser.UseVisualStyleBackColor = true;
+            this.uxAddUser.Click += new System.EventHandler(this.uxAddUser_Click);
             // 
             // uxButton4
             // 
@@ -76,9 +77,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(207, 95);
+            this.ClientSize = new System.Drawing.Size(203, 76);
             this.Controls.Add(this.uxButton4);
-            this.Controls.Add(this.uxButton3);
+            this.Controls.Add(this.uxAddUser);
             this.Controls.Add(this.uxButton2);
             this.Controls.Add(this.uxButton1);
             this.Name = "uxMainMenuForm";
@@ -91,7 +92,7 @@
 
         private System.Windows.Forms.Button uxButton1;
         private System.Windows.Forms.Button uxButton2;
-        private System.Windows.Forms.Button uxButton3;
+        private System.Windows.Forms.Button uxAddUser;
         private System.Windows.Forms.Button uxButton4;
     }
 }
