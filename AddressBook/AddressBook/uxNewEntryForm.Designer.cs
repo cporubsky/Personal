@@ -1,6 +1,6 @@
 ﻿namespace AddressBook
 {
-    partial class uxNewAddressForm
+    partial class uxNewEntryForm
     {
         /// <summary>
         /// Required designer variable.

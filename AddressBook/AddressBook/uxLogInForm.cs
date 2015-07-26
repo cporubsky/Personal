@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace AddressBook
 {
-    public partial class uxLogInForm : Form
+    public partial class uxLoginForm : Form
     {   
         
         State s;
@@ -20,7 +20,7 @@ namespace AddressBook
 
         //tempConn = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
 
-        public uxLogInForm()
+        public uxLoginForm()
         {
             InitializeComponent();
             
@@ -28,7 +28,7 @@ namespace AddressBook
             uxPassword.PasswordChar = '\u2022'; //creates bullets for chars in password for gui
         }
 
-        public uxLogInForm(State s, UserManagement u, Controller c)
+        public uxLoginForm(State s, UserManagement u, Controller c)
         {
             this.s = s;
             this.u = u;
@@ -43,7 +43,7 @@ namespace AddressBook
         {
             s.Status = "Login";
 
-            u.UserName = uxUserName.Text; //username from form
+            u.Username = uxUsername.Text; //username from form
             u.Password = uxPassword.Text; //password from form
             if (c.handle(sender, e))
             {
@@ -62,7 +62,7 @@ namespace AddressBook
 
                 //MessageBox.Show(sb.ToString());
 
-                if (uxUserName.Text == "corey")
+                if (uxUsername.Text == "corey")
                 {
                     MessageBox.Show("Admin is now logged in");             
                     uxMainMenuForm mainMenu = new uxMainMenuForm(true, c);
@@ -79,7 +79,7 @@ namespace AddressBook
             else
             {
                 MessageBox.Show("Wrong username or password");
-                uxUserName.Text = ""; 
+                uxUsername.Text = ""; 
                 uxPassword.Text = ""; 
             }
         }  

@@ -1,6 +1,6 @@
 ﻿namespace AddressBook
 {
-    partial class uxLogInForm
+    partial class uxLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uxUserName = new System.Windows.Forms.TextBox();
+            this.uxUsername = new System.Windows.Forms.TextBox();
             this.uxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,12 +36,12 @@
             this.uxResetPw = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // uxUserName
+            // uxUsername
             // 
-            this.uxUserName.Location = new System.Drawing.Point(75, 6);
-            this.uxUserName.Name = "uxUserName";
-            this.uxUserName.Size = new System.Drawing.Size(150, 20);
-            this.uxUserName.TabIndex = 0;
+            this.uxUsername.Location = new System.Drawing.Point(75, 6);
+            this.uxUsername.Name = "uxUsername";
+            this.uxUsername.Size = new System.Drawing.Size(150, 20);
+            this.uxUsername.TabIndex = 0;
             // 
             // uxPassword
             // 
@@ -55,9 +55,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "User Name:";
+            this.label1.Text = "Username:";
             // 
             // label2
             // 
@@ -87,7 +87,7 @@
             this.uxResetPw.Text = "Reset PW";
             this.uxResetPw.UseVisualStyleBackColor = true;
             // 
-            // uxLogInForm
+            // uxLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -97,8 +97,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxPassword);
-            this.Controls.Add(this.uxUserName);
-            this.Name = "uxLogInForm";
+            this.Controls.Add(this.uxUsername);
+            this.Name = "uxLoginForm";
             this.Text = "LogIn";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,7 +107,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox uxUserName;
+        private System.Windows.Forms.TextBox uxUsername;
         private System.Windows.Forms.TextBox uxPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -24,7 +24,7 @@ namespace AddressBook
 
             Controller c = new Controller(u, a, s, connString);
 
-            Application.Run(new uxLogInForm(s, u, c));
+            Application.Run(new uxLoginForm(s, u, c));
         }
     }
 }

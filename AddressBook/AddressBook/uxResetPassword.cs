@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AddressBook
 {
-    public partial class uxNewAddressForm : Form
+    public partial class uxResetPassword : Form
     {
-        public uxNewAddressForm()
+        public uxResetPassword()
         {
             InitializeComponent();
         }

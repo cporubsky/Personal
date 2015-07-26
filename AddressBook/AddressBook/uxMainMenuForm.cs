@@ -18,7 +18,7 @@ namespace AddressBook
         private bool admin = false;
         Controller c;
 
-        string tempConn = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
+        //string tempConn = "Data Source=MAIN-PC;Initial Catalog=TEST_DB;Integrated Security=True";
 
         public uxMainMenuForm()
         {

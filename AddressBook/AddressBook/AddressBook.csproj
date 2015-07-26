@@ -55,6 +55,18 @@
       <DependentUpon>TEST_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserManagement.cs" />
+    <Compile Include="uxAddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uxAddUserForm.Designer.cs">
+      <DependentUpon>uxAddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uxResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uxResetPassword.Designer.cs">
+      <DependentUpon>uxResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="uxSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,31 +79,34 @@
     <Compile Include="uxMainMenuForm.Designer.cs">
       <DependentUpon>uxMainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="uxNewAddressForm.cs">
+    <Compile Include="uxNewEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="uxNewAddressForm.Designer.cs">
-      <DependentUpon>uxNewAddressForm.cs</DependentUpon>
+    <Compile Include="uxNewEntryForm.Designer.cs">
+      <DependentUpon>uxNewEntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="uxLogInForm.cs">
+    <Compile Include="uxLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="uxLogInForm.Designer.cs">
-      <DependentUpon>uxLogInForm.cs</DependentUpon>
+    <Compile Include="uxLoginForm.Designer.cs">
+      <DependentUpon>uxLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="uxAddUserForm.resx">
+      <DependentUpon>uxAddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uxSearchForm.resx">
       <DependentUpon>uxSearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uxMainMenuForm.resx">
       <DependentUpon>uxMainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uxNewAddressForm.resx">
-      <DependentUpon>uxNewAddressForm.cs</DependentUpon>
+    <EmbeddedResource Include="uxNewEntryForm.resx">
+      <DependentUpon>uxNewEntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uxLogInForm.resx">
-      <DependentUpon>uxLogInForm.cs</DependentUpon>
+    <EmbeddedResource Include="uxLoginForm.resx">
+      <DependentUpon>uxLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
