@@ -1,0 +1,6 @@
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\bin\Debug\StringComplexity.exe.config
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\bin\Debug\StringComplexity.exe
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\bin\Debug\StringComplexity.pdb
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\obj\Debug\StringComplexity.csprojResolveAssemblyReference.cache
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\obj\Debug\StringComplexity.exe
+C:\Users\Corey\Desktop\StringComplexity\StringComplexity\obj\Debug\StringComplexity.pdb
