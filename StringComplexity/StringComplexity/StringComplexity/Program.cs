@@ -27,24 +27,14 @@ namespace StringComplexity
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
-        {
-            //reads word, converts to lowercase for consistency
-            //adds to StringBuilder
-            _sb.Append(Console.ReadLine().ToLower());
+        {            
+            _sb.Append(Console.ReadLine().ToLower()); //reads word, converts to lowercase for consistency, adds to StringBuilder
+            
+            if (_sb.Length > 101 || _sb.Length < 1) return; //if over 100 letters, or if StringBuilder is empty -> exit program
 
-            //if over 100 letters, or
-            //if StringBuilder is empty -> exit program
-            if (_sb.Length > 101 || _sb.Length == 0) return;
-
-            //processes string to count occurrences
-            ProcessString(_sb, _dictionary);
-
-            //computes times eraser is needed
-            //and prints result
-            ComputeEraser(_sb, _dictionary);
-             
-            //holds cmd window open
-            Console.ReadLine();
+            ProcessString(_sb, _dictionary); //processes string to count occurrences 
+            ComputeEraser(_sb, _dictionary); //computes times eraser is needed and prints result
+            Console.ReadLine(); //holds cmd window open
         }
 
         /// <summary>
@@ -54,31 +44,21 @@ namespace StringComplexity
         /// <param name="d">Dictionary used to store key, value pairs</param>
         public static void ProcessString(StringBuilder sb, Dictionary<char,int> d)
         {
-            //convert StringBuilder 
-            //to string for processing
-            string s = sb.ToString();
-            
-            //try to process
-            try
+            string s = sb.ToString(); //convert StringBuilder to string for processing
+
+            try //try to process
             {
-                //enumerates through chars in str
-                foreach (char c in s)
-                {
-                    //if c isn't a letter, don't count
-                    if (!char.IsLetter(c)) continue;
-
-                    //if the key exists, increment value
-                    if (d.ContainsKey(c)) d[c]++;
-
-                    //if key doesn't exit, this is the first occurence
-                    else d[c] = 1;
+                
+                foreach (char c in s) //enumerates through chars in str
+                {            
+                    if (!char.IsLetter(c)) continue; //if c isn't a letter, don't count
+                    if (d.ContainsKey(c)) d[c]++; //if the key exists, increment value 
+                    else d[c] = 1; //if key doesn't exit, this is the first occurence
                 }
             }
-            //catch exception
-            //write to console
-            catch(Exception e)
+            catch(Exception e) //catch exception
             {
-                Console.WriteLine(e.ToString());
+                Console.WriteLine(e.ToString()); //write to console
             }   
         }
 
@@ -90,19 +70,12 @@ namespace StringComplexity
         /// <param name="d">Dictionary used to store key, value pairs</param>
         public static void ComputeEraser(StringBuilder sb, Dictionary<char, int> d)
         {
-            //minimum times eraser must be used
-            //complexity is dictionary size, d.Count
-            int magicNumber = d.Count - 2; //4
+            int magicNumber = d.Count - 2; //minimum times eraser must be used, complexity is dictionary size -> d.Count
 
-            //clear console
-            Console.Clear();
+            Console.Clear(); //clear console
 
-            //if complexity is less than zero, 
-            //then eraser doesn't have to be used
-            if (magicNumber < 0) Console.Write(sb.Append(" 0").ToString()); //consider checking for -1 on magic number, and check that complexity is > 0
-
-            //complexity is greater than 1, print minimum times eraser is needed
-            else Console.Write(sb.Append(" " + magicNumber.ToString()));
+            if (magicNumber < 0) Console.Write(sb.Append(" 0").ToString()); //if complexity is less than zero, then eraser doesn't have to be used 
+            else Console.Write(sb.Append(" " + magicNumber.ToString())); //complexity is greater than 1, print minimum times eraser is needed
         }
     }
 }
