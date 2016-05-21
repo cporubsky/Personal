@@ -1,0 +1,12 @@
+<%- include('../layout/header', {title: "Wiki Index", user: user}) %>
+<% title = "Wiki Index" %>
+<div class="container">
+  <h1>List of Wikis</h1>
+  <ul>
+    <% wiki.forEach(function(w) { %>
+      <%- include('_wiki', {wiki: w}) %>
+    <% }); %>
+  </ul>
+  <a href="/wiki/new">New Wiki Page</a><br/>
+</div>
+<%- include('../layout/footer') %>

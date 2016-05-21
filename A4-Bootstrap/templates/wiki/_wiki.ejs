@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-12">
+    <li id="title"><%= wiki.title %>&nbsp;</li>
+    <% if((!user.is_banned) && (user.username != "Guest")) { %>
+
+        <div class="btn-group">
+        <a href="/wiki/<%= wiki.id %>" class="btn btn-info btn-sm" role="button">View</a>
+        <a href="/wiki/<%= wiki.id %>/edit" class="btn btn-info btn-sm" role="button">Edit Wiki</a>
+        <a href="/wiki/<%= wiki.id %>/talk/edit" class="btn btn-info btn-sm" role="button">Edit Talk</a>
+        <a href="/wiki/<%= wiki.id %>/delete" class="btn btn-info btn-sm" role="button">Delete</a>
+        </div>
+
+    <% } else { %>
+
+          <a href="/wiki/<%= wiki.id %>" class="btn btn-info btn-sm" role="button">View</a>
+
+      <% } %>
+  </div>
+
+</div>
+<!-- Need to replace equipment
+     logic with wiki logic -->

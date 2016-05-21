@@ -1,0 +1,10 @@
+<%- include('../layout/header', {title: wiki.title, user: user}) %>
+<!-- more html below -->
+<h1><%= wiki.title %></h1>
+<p>
+  <%= wiki.talk %>
+</p>
+<a href="/wiki/<%= wiki.id %>">Back to <%= wiki.title %></a><br/>
+<a href="/wiki">Back to index</a><br/>
+
+<%- include('../layout/footer') %>

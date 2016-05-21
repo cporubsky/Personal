@@ -1,0 +1,15 @@
+<li>
+  <%= users.username %>
+  <% if(users.is_admin) { %>
+    <button type="button" class="user-change" data-id="<%= users.id %>" data-role="demote">demote</button>
+    <!-- <a class="bttn user-change" data-id="<%= users.id %>" data-role='demote' href="">demote</a> -->
+  <% } else { %>
+    <button type="button" class="user-change" data-id="<%= users.id %>" data-role="promote">promote</button>
+    <!-- <a class="bttn user-change" data-id="<%= users.id %>" href="">promote</a> -->
+  <% } %>
+  <% if(users.is_banned) { %>
+    <a class='bttn' id="unban" href="/wiki/users/<%= users.id %>/unban">Unban</a>
+  <% } else { %>
+    <a class='bttn' id="ban" href="/wiki/users/<%= users.id %>/ban">Ban</a>
+  <% } %>
+</li>

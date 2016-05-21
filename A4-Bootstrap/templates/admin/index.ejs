@@ -1,0 +1,14 @@
+<%- include('../layout/header', {title: "List of Users", user: user}) %>
+<% title = "List of Users" %>
+<h1>List of Users</h1>
+<ul>
+  <% users.forEach(function(u) { %>
+    <%- include('_users', {users: u}) %>
+  <% }); %>
+</ul>
+<a href="/wiki">Back to Index</a><br/>
+<a href="/wiki/new">Add Wiki</a><br/>
+
+
+
+<%- include('../layout/footer') %>

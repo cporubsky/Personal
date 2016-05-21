@@ -1,0 +1,9 @@
+<%- include('../layout/header', {title: wiki.title, user: user}) %>
+<form action="/wiki/<%= wiki.id %>/talk" method="POST">
+  <input type="text" placeholder="Enter title" size="67" name ="title" value="<%= wiki.title%>"/><br />
+  <textarea rows="30" cols="60" placeholder="Enter wiki content here." name="talk"><%= wiki.talk %></textarea><br />
+  <button type="submit">Submit</button>
+</form>
+<a href="/wiki/<%= wiki.id %>">Back to wiki post</a><br/>
+<a href="/wiki">Back to Index</a><br/>
+<%- include('../layout/footer') %>

@@ -1,0 +1,8 @@
+<%- include('../layout/header', {title: "New Wiki", user: user}) %>
+<form action="/wiki" method="POST">
+  <input type="text" placeholder="Enter title" size="67" name ="title"/><br />
+  <textarea rows="30" cols="60" placeholder="Enter wiki content here." name="entry"></textarea><br />
+  <button type="submit">Submit</button>
+</form>
+<a href="/wiki">Back to Index</a><br/>
+<%- include('../layout/footer') %>
