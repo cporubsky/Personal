@@ -1,1 +1,5 @@
-
+---------------------------
+Fri 06.03.2016 at 02.38.24 PM CDT | Job Starting.
+Fri 06.03.2016 at 02.38.25 PM CDT | 3/3 processed successfully.
+Fri 06.03.2016 at 02.38.25 PM CDT | Job Completed Successfully.
+---------------------------
