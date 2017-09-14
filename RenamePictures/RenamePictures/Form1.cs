@@ -41,7 +41,7 @@ namespace RenamePictures
         private void uxStart_Click(object sender, EventArgs e)
         {
             //check if directories exist
-                //if either exists pop up message box in error
+                //if destination has files in it pop up message box in error then stop everything
                 //else create directories (Name from user, and Action Required)
                     //read file in current directory
                     //if picture has a date taken
