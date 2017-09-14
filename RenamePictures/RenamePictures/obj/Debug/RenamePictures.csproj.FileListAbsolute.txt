@@ -1,0 +1,9 @@
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\bin\Debug\RenamePictures.exe.config
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\bin\Debug\RenamePictures.exe
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\bin\Debug\RenamePictures.pdb
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.csprojResolveAssemblyReference.cache
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.Properties.Resources.resources
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.csproj.GenerateResource.Cache
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.exe
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.pdb
+C:\Users\cporu\Desktop\RenamePictures\RenamePictures\obj\Debug\RenamePictures.uxMainForm.resources
